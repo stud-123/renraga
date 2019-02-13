@@ -1,0 +1,360 @@
+<html>
+
+<head>
+	<title>A Music Company</title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="assets/slider/css/simple-slider.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+  $( function() {
+    $( "#slider-vertical" ).slider({
+      orientation: "horizontal",
+      range: "min",
+      min: 0,
+      max: 100,
+      value: 60,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.value );
+      }
+    });
+    /*window.alert(value);*/
+    var value = $( "#slider-vertical" ).slider( "option", "value" ) ;
+      value = value / 100;
+      $("#player").volume = parseFloat(value);
+  }) ;
+  </script>
+
+
+</head>
+
+<body class="nojQuery">
+
+
+<div id="header">
+  <img id="top-pic" src="img/rr.jpg">
+  <h3 id="title">red ribbon</h3>
+
+    <div id="nav">
+        <ul>
+            <li>music</li>
+            <li>about us</li>
+            <li>videos</li>
+            <li>artists</li>
+            <li>news</li>
+            <li>e-catalogue</li>
+
+        </ul>
+    </div>
+
+    <div id="searchbar">
+        <input type="search" placeholder="Search">
+        <div id="search_button">
+        <i class="fa fa-search" aria-hidden="true" id="search-icon"></i>
+        </div>
+    </div>
+
+    <div id="images">
+        <!-- <img src="img/john.jpg" class="img"> -->
+        <i class="fa fa-facebook fa-lg img" aria-hidden="true" id="fb"></i>
+        <i class="fa fa-twitter fa-lg img" aria-hidden="true" id="tw"></i>
+        <i class="fa fa-instagram fa-lg img" aria-hidden="true" id="insta"></i>
+        <i class="fa fa-youtube fa-lg img" aria-hidden="true" id="you"></i>
+        <i class="fa fa-google-plus fa-lg img" aria-hidden="true" id="plus"></i>
+        <i class="fa fa-shopping-cart fa-lg img" aria-hidden="true" id="cart"></i>
+        <i class="fa fa-bars fa-lg img" aria-hidden="true" id="menu"></i>
+    </div>
+</div>
+
+<br/><br/><br/><br/>
+
+
+
+<h4 class="headers">Old Songs</h4>
+<span class="view-all"><a href="">View All &gt;</a></span>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/1.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" class="hello" width="40px;" id="1" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/2.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="2" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/3.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="3" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/4.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="4" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/5.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="5" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/6.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="6" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+       
+            </div>
+        </div>
+
+
+
+
+
+<h4 class="headers">New Releases</h4>
+<span class="view-all"><a href="">View All &gt;</a></span>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/1.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" class="hello" width="40px;" id="1" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/2.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="2" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/3.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="3" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/4.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="4" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/5.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="5" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/6.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="6" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+       
+            </div>
+        </div>
+
+
+
+
+<h4 class="headers">Top Songs</h4>
+<span class="view-all"><a href="">View All &gt;</a></span>
+<div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/1.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" class="hello" width="40px;" id="1" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/2.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="2" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/3.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="3" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/4.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="4" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/5.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="5" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="col-12 text-center parent">
+                        <div class="hov"><img src="img/6.jpg" width="170px;" height="150px"></div>
+                        <div class="play"><img src="img/play.png" width="40px;" class="hello" id="6" /> </div>
+                        <label class="mt-2">kunal durgani</label>
+                    </div>
+                </div>
+       
+            </div>
+        </div>
+
+        <footer style="background-color: black; width:100%; height:300px; color: white">
+            <div id="maindiv_footer">
+                    <div id="div1_footer">
+                        <img src="img/rr.jpg" width="40px" height="40px" id="footer_img">
+                        <h4 id="footer_heading">red ribbon</h4>
+                        <p id="footer_para">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius maximus uno pretium. In vitae aliquam urna, id mollis  ultrices sit amet a ipsum. Suspendisse lessa egestas luctus gravida ante sed libero.</p>
+                    </div>
+
+                        <ul id="first_ul">
+                            <li class="bold_li">Videos</li>
+                            <li>Bollywood</li>
+                            <li>Bhakti Ras</li>
+                            <li>Gujarati</li>
+                            <li>Kids</li>
+                            <li>Pop Chartbusters</li>
+                            <li>Regional</li>
+                            <li>Lalitya Munshaw</li>
+                        </ul>
+
+                        <ul id="second_ul">
+                            <li class="bold_li">Videos</li>
+                            <li>Bollywood</li>
+                            <li>Bhakti Ras</li>
+                            <li>Gujarati</li>
+                            <li>Kids</li>
+                            <li>Pop Chartbusters</li>
+                            <li>Regional</li>
+                            <li>Lalitya Munshaw</li>
+                        </ul>
+
+
+                        <div id="footer_details">
+
+                            <h6>Contact Us</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius maximus pretium.</p>
+
+                            <br/>
+                            <h6>About Us</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius maximus pretium.</p>
+
+                        </div>
+
+
+                        <ul id="third_ul">
+                            <li class="bold_li">Social</li>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Gmail</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                            <li>Messenger</li>
+                            <li>Lalitya Munshaw</li>
+                        </ul>
+
+                    </div>
+        </footer>
+
+        <div  id="hide_show" style="width: 100%; height: 80px; display: none">
+        </div>
+
+
+
+
+
+  <div class="out">
+  <div class="audio-player">
+    <div class="album-image" style="background-image: url('https://artwork-cdn.7static.com/static/img/sleeveart/00/051/614/0005161476_350.jpg')"></div>
+
+    <div id="previous-btn"><i class="fa fa-backward" style="font-size: 30px;"></i></div>
+    <div class="play-btn"></div>
+    <div id="forward-btn"><i class="fa fa-forward" style="font-size: 30px;"></i></div>
+    <div class="audio-wrapper" id="player-container" href="javascript:;">
+      <audio id="player" ontimeupdate="initProgressBar()">
+        <source src="songs/yoursound.mp3" type="audio/mp3">
+      </audio>
+    </div>
+    <div class="player-controls scrubber">
+      <p>Oslo <small>by</small> Holy Esque</p>
+      <div id="slider-vertical" style="height:10px; width: 200px;"></div>
+     <input type="text" id="amount" readonly hidden style="border:0; color:#f6931f; font-weight:bold;">
+      <span id="seekObjContainer">
+        <progress id="seekObj" value="0" max="  " ="1"></progress>
+      </span>
+      <small style="  margin-left: 20px;" class="start-time"></small>
+      <small style="  margin-left: 1px;" class="end-time"></small>
+
+    </div>
+      </div>
+      </div>
+
+</body>
+
+<script src="assets/slider/js/simple-slider.js"></script>
+
+<script src="test.js"></script>
+
+<script src="assets/bootstrap/bootstrap.min.js"></script>
+
+
+<script>
+    $(".play").click(function(){
+        $(".out").css("display", "block");
+    });
+</script>
+
+</html>

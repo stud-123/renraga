@@ -1,0 +1,451 @@
+<html>
+
+<head>
+	<title>A Music Company</title>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="assets/slider/css/simple-slider.css" rel="stylesheet" type="text/css" />
+  <!-- <link href="assets/slider/css/simple-slider-volume.css" rel="stylesheet" type="text/css" />  --> 
+
+
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#slider-vertical" ).slider({
+      orientation: "horizontal",
+      range: "min",
+      min: 0,
+      max: 100,
+      value: 60,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( ui.value );
+      }
+    });
+    /*window.alert(value);*/
+    var value = $( "#slider-vertical" ).slider( "option", "value" ) ;
+      value = value / 100;
+      $("#player").volume = parseFloat(value);
+  }) ;
+  </script>
+
+
+
+   <style>
+   	.parent{
+   		position:relative;	
+   	}
+   	.play{
+   	position : absolute;
+    display:none;
+    top:30%; 
+    width:40px;
+    margin:0 auto; left:0px;
+    right:0px;
+    z-index:100
+   	}
+    /*.hell{
+    position : absolute;
+    display:none;
+    background-image: url('img/pause.png');
+    top:30%; 
+    width:40px;
+    margin:0 auto; left:0px;
+    right:0px;
+    z-index:100
+    }*/
+    .play:hover{
+      cursor: pointer;
+    }
+   	body.nojQuery div.parent:hover .play{
+      display:block;
+  }
+ /* body.jQuery div.parent:hover .play{
+      display:block;
+  }*/
+    /*.parent:hover .hell{
+      display:block;
+    }*/
+   	
+   	.headers{
+   		margin-left: 28px;
+      display: inline-block;
+   	}
+
+
+
+/*html {
+  height: 100%;
+  display: table;
+  margin: auto;
+}
+
+body {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}*/
+
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid lighten(#acacac, 20%);
+  /*text-align: center;*/
+  display: flex;
+  flex-flow: row;
+  border-top: solid 1px black;
+}
+  .album-image {
+    min-height: 60px;
+    width: 120px;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  .player-controls {
+    flex: 3;
+  }
+    progress {
+      width: 60%;
+    }
+    progress[value] {
+      
+      appearance: none;
+      background-color: white;
+      color: blue;
+      height: 5px;
+      margin-bottom: 0px;
+      margin-left: 20px;
+    }
+
+    progress:hover{
+      cursor: pointer;  
+    }
+    progress[value]:: progress-bar {
+      background-color: white;
+      border-radius: 2px;
+      border: 1px solid lighten(#acacac, 20%);
+      color: blue;
+    }
+    progress:: progress-value {
+      background-color: blue;
+    }
+    p {
+      font-size: 1.5rem;
+      margin-top: 5px; 
+      margin-left: 20px;
+      margin-bottom: 0px;
+    }
+  .play-btn {
+    background-image: url('img/play.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin: 1rem 0 1rem 0rem;
+    }
+    .play-btn:hover{
+      cursor: pointer;
+    }
+    #previous-btn {
+    margin: 1.5rem 0.5rem 1rem 1rem;
+    }
+    #forward-btn {
+    margin: 1.5rem 0 1rem 1rem;
+    }
+    i{
+      cursor: pointer;
+    }
+
+
+
+
+
+
+    /*[class^=slider] { display: inline-block; margin-bottom: 30px; }
+  .output { color: #888; font-size: 14px;  vertical-align: top; position: relative; left: 300px;bottom:10px;}*/
+
+
+
+  #slider-vertical{
+    position: relative;
+    top:-20;
+    left: 250px; 
+
+  }
+
+   </style>
+   <script>
+
+    
+$( document ).ready(function() {
+  
+/*  var play = false;
+  var player = document.getElementById('player');
+  $('.play-pause').click(function(){
+
+    //var status = $(this).attr('id');  // getting the id so that i can find which song was played.
+
+  if(play == false){
+   $(this).attr('src',"img/pause.png");
+    player.play();
+    play= true;
+    
+    return;
+  }else if(play==true){
+    $(this).attr('src',"img/play.png");
+    player.pause();
+    play= false;
+    
+    return;
+  }
+
+});*/
+
+  });
+
+
+     
+
+</script>
+
+   </head>
+
+<body class="nojQuery">
+
+<h4 class="headers">Old Songs</h4>
+<span class="view-all"><a href="">View All &gt;</a></span>
+        <div class="container-fluid">
+        	<div class="row">
+        		<div class="col-2">
+        			<div class="col-12 text-center parent">
+        				<div class="hov"><img src="img/john.jpg" width="170px;"></div>
+        				<div class="play"><img src="img/play.png" class="hello" width="40px;" id="1" /> </div>
+        				<label class="mt-2">kunal durgani</label>
+        			</div>
+        		</div>
+
+        		<div class="col-2">
+        			<div class="col-12 text-center parent">
+        				<div class="hov"><img src="img/john.jpg" width="170px;"></div>
+        				<div class="play"><img src="img/play.png" width="40px;" class="hello" id="2" /> </div>
+        				<label class="mt-2">kunal durgani</label>
+        			</div>
+        		</div>
+
+        		<div class="col-2">
+        			<div class="col-12 text-center parent">
+        				<div class="hov"><img src="img/john.jpg" width="170px;"></div>
+        				<div class="play"><img src="img/play.png" width="40px;" class="hello" id="3" /> </div>
+        				<label class="mt-2">kunal durgani</label>
+        			</div>
+        		</div>
+
+        		<div class="col-2">
+        			<div class="col-12 text-center parent">
+        				<div class="hov"><img src="img/john.jpg" width="170px;"></div>
+        				<div class="play"><img src="img/play.png" width="40px;" class="hello" id="4" /> </div>
+        				<label class="mt-2">kunal durgani</label>
+        			</div>
+        		</div>
+
+        		<div class="col-2">
+        			<div class="col-12 text-center parent">
+        				<div class="hov"><img src="img/john.jpg" width="170px;"></div>
+        				<div class="play"><img src="img/play.png" width="40px;" class="hello" id="5" /> </div>
+        				<label class="mt-2">kunal durgani</label>
+        			</div>
+        		</div>
+
+        		<div class="col-2">
+        			<div class="col-12 text-center parent">
+        				<div class="hov"><img src="img/john.jpg" width="170px;"></div>
+        				<div class="play"><img src="img/play.png" width="40px;" class="hello" id="6" /> </div>
+        				<label class="mt-2">kunal durgani</label>
+        			</div>
+        		</div>
+       
+        	</div>
+        </div>
+
+
+
+
+
+<h4 class="headers">New Releases</h4>
+<span class="view-all"><a href="">View All &gt;</a></span>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" class="hello" width="40px;" id="1" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="2" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="3" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="4" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="5" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="6" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+       
+          </div>
+        </div>
+
+
+
+
+<h4 class="headers">Top Songs</h4>
+<span class="view-all"><a href="">View All &gt;</a></span>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" class="hello" width="40px;" id="1" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="2" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="3" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="4" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="5" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="col-12 text-center parent">
+                <div class="hov"><img src="img/john.jpg" width="170px;"></div>
+                <div class="play"><img src="img/play.png" width="40px;" class="hello" id="6" /> </div>
+                <label class="mt-2">kunal durgani</label>
+              </div>
+            </div>
+       
+          </div>
+        </div>
+
+
+
+
+
+  <div class="audio-player">
+    <div class="album-image" style="background-image: url('https://artwork-cdn.7static.com/static/img/sleeveart/00/051/614/0005161476_350.jpg')"></div>
+
+    <div id="previous-btn"><i class="fa fa-backward" style="font-size: 30px;"></i></div>
+    <div class="play-btn"></div>
+    <div id="forward-btn"><i class="fa fa-forward" style="font-size: 30px;"></i></div>
+    <div class="audio-wrapper" id="player-container" href="javascript:;">
+      <audio id="player" ontimeupdate="initProgressBar()">
+        <source src="songs/yoursound.mp3" type="audio/mp3">
+      </audio>
+    </div>
+    <div class="player-controls scrubber">
+      <p>Oslo <small>by</small> Holy Esque</p>
+      <div id="slider-vertical" style="height:10px; width: 200px;"></div>
+     <input type="text" id="amount" readonly hidden style="border:0; color:#f6931f; font-weight:bold;">
+      <span id="seekObjContainer">
+        <progress id="seekObj" value="0" max="  " ="1"></progress>
+      </span>
+      <small style="  margin-left: 20px;" class="start-time"></small>
+      <small style="  margin-left: 1px;" class="end-time"></small>
+
+    </div>
+      </div>
+
+</body>
+
+ <script src="assets/slider/js/simple-slider.js"></script>
+
+<script src="test.js"></script>
+
+  <script>
+  /*$("[data-slider]")
+    .each(function () {
+      var input = $(this);
+      $("<span>")
+        .addClass("output")
+        .insertAfter($(this));
+    })
+    .bind("slider:ready slider:changed", function (event, data) {
+      $(this)
+        .nextAll(".output:first")
+          .html(data.value.toFixed(3));
+    });
+*/
+
+
+    function setvolume(){
+      /*player.volume = slidervertical.value / 100;*/
+       
+    }
+    </script>
+
+</html>
